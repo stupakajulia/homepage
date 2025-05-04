@@ -191,6 +191,21 @@
         en.style.display = 'none';
       }
     });
+
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
   </script>
+  <button id="scrollTopBtn" title="Вгору">⬆ Вгору</button>
 </body>
 </html>

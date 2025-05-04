@@ -21,6 +21,17 @@ h1, h2, h3 {
   color: #1e88e5;
 }
 
+h1, h2, h3 {
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: #0d47a1;
+  transform: scale(1.03); /* трохи збільшується */
+}
+
 a {
   color: #1e88e5;
   text-decoration: none;
@@ -63,4 +74,32 @@ ul {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 14px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+  background-color: #1565c0;
 }
