@@ -4,64 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Резюме Юлія Ступака</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background-color: #fff;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-in;
-    }
-    h1, h2, h3 {
-      color: #1e88e5;
-    }
-    a {
-      color: #1e88e5;
-      text-decoration: none;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .download-btn, .lang-toggle {
-      margin: 10px 5px;
-      padding: 10px 16px;
-      background-color: #1e88e5;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    }
-    .download-btn:hover, .lang-toggle:hover {
-      background-color: #1565c0;
-    }
-    @media print {
-      body {
-        font-size: 12pt;
-        margin: 1cm;
-        background: white;
-      }
-      .lang-toggle, .download-btn {
-        display: none;
-      }
-      .container {
-        box-shadow: none;
-      }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -161,6 +104,8 @@
     </div>
   </div>
 
+  <button id="scrollTopBtn" title="Вгору">⬆ Вгору</button>
+
   <script>
     function switchLanguage() {
       const ua = document.getElementById('ua');
@@ -194,18 +139,17 @@
 
     const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", () => {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-    scrollBtn.classList.add("show");
-  } else {
-    scrollBtn.classList.remove("show");
-  }
-});
+    window.addEventListener("scroll", () => {
+      if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
 
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   </script>
-  <button id="scrollTopBtn" title="Вгору">⬆ Вгору</button>
 </body>
 </html>
