@@ -1,80 +1,196 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Резюме — Юлія Ступака</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Резюме Юлія Ступака</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in;
+    }
+    h1, h2, h3 {
+      color: #1e88e5;
+    }
+    a {
+      color: #1e88e5;
+      text-decoration: none;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .download-btn, .lang-toggle {
+      margin: 10px 5px;
+      padding: 10px 16px;
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+    .download-btn:hover, .lang-toggle:hover {
+      background-color: #1565c0;
+    }
+    @media print {
+      body {
+        font-size: 12pt;
+        margin: 1cm;
+        background: white;
+      }
+      .lang-toggle, .download-btn {
+        display: none;
+      }
+      .container {
+        box-shadow: none;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Юлія Ступака</h1>
-      <h2>Головний спеціаліст з фінансів / Майбутній JavaScript-розробник</h2>
-      <p>Email: yuliya.stupaka@gmail.com | Телефон: +38 (XXX) XXX-XX-XX</p>
-      <p>GitHub: github.com/stupakajulia</p>
-    </header>
+    <button onclick="switchLanguage()" class="lang-toggle">🌐 UA / EN</button>
+    <button class="download-btn" onclick="window.print()">⬇️ Завантажити як PDF</button>
 
-    <section>
-      <h3>🔹 Мета</h3>
-      <p>Отримати позицію Junior JavaScript Developer у стабільній ІТ-компанії, використовуючи досвід у фінансах, аналітиці та державному управлінні.</p>
-    </section>
+    <!-- Ukrainian Version -->
+    <div id="ua">
+      <header>
+        <h1>Юлія Ступака</h1>
+        <h2>Junior JavaScript Developer</h2>
+        <p>Email: <a href="mailto:stupakajulia@gmail.com">stupakajulia@gmail.com</a></p>
+      </header>
 
-    <section>
-      <h3>🎓 Освіта</h3>
-      <ul>
-        <li><strong>НТУУ "КПІ ім. І. Сікорського"</strong> — Інженерія програмного забезпечення (2021)</li>
-        <li><strong>Міжнародний університет фінансів</strong> — Фінанси (2010)</li>
-        <li><strong>КНУТД</strong> — Технологія та дизайн тканин і трикотажу (2007)</li>
-      </ul>
-    </section>
+      <section>
+        <h3>Мета</h3>
+        <p>Розпочати кар'єру Junior JavaScript Developer у сучасній ІТ-компанії, де зможу застосувати свій аналітичний підхід для створення ефективних вебрішень. Зацікавлена у постійному розвитку, вдосконаленні навичок та продуктивній співпраці в команді.</p>
 
-    <section>
-      <h3>💼 Досвід роботи</h3>
-      <ul>
-        <li>
-          <strong>Головний спеціаліст з фінансів</strong> — 2022–дотепер<br />
-          Дніпровська РДА, м. Київ. Ведення бюджетних програм ЖКГ, аналітика, звітність.
-        </li>
-        <li>
-          <strong>Провідний інженер</strong> — 2016–2021<br />
-          ЖКГ. Робота з системою ЄІСУБ, аналіз даних, комунікація з підрядниками.
-        </li>
-        <li>
-          <strong>Інженер з розрахунку послуг</strong> — 2009–2013<br />
-          Ведення нарахувань, робота з платіжними базами, клієнтська підтримка.
-        </li>
-      </ul>
-    </section>
+        <h3>Освіта</h3>
+        <ul>
+          <li>2021 — Бакалавр з інженерії програмного забезпечення, КПІ ім. І. Сікорського</li>
+          <li>2010 — Бакалавр з фінансів, Міжнародний університет фінансів</li>
+          <li>2007 — Магістр з технології і дизайну, КНУТД</li>
+        </ul>
 
-    <section>
-      <h3>🧰 Навички</h3>
-      <ul>
-        <li>JavaScript (початківець, у процесі навчання)</li>
-        <li>HTML, CSS, адаптивна верстка</li>
-        <li>Git / GitHub</li>
-        <li>VS Code, Chrome DevTools</li>
-        <li>SQL, Excel, аналітика</li>
-      </ul>
-    </section>
+        <h3>Досвід</h3>
+        <p>2022–2025 — Головний спеціаліст, Фінансове управління Дніпровської РДА м. Київ. Розробка таблиць, аналіз даних, впровадження автоматизації обліку бюджетних програм.</p>
+        <p>2009–2021 — Інженер, оператор ПК, лаборант — досвід роботи з документацією, обчисленнями, проєктами в державному секторі.</p>
 
-    <section>
-      <h3>🌟 Особисті якості</h3>
-      <p>Аналітичне мислення, уважність до деталей, відповідальність, комунікабельність, здатність швидко навчатися.</p>
-    </section>
+        <h3>Навички</h3>
+        <ul>
+          <li>JavaScript, HTML, CSS</li>
+          <li>Git, GitHub, Git Flow</li>
+          <li>VS Code, Chrome DevTools</li>
+        </ul>
 
-    <section>
-      <h3>🌍 Мови</h3>
-      <ul>
-        <li>Українська — рідна</li>
-        <li>Англійська — початковий рівень (вивчається)</li>
-        <li>Німецька — початковий рівень</li>
-      </ul>
-    </section>
+        <h3>Особисті якості</h3>
+        <ul>
+          <li>Уважність до деталей</li>
+          <li>Аналітичне мислення</li>
+          <li>Прагнення до навчання</li>
+          <li>Командність та відповідальність</li>
+        </ul>
 
-    <footer>
-      <p><em>Це резюме створене як HTML-сторінка з метою розміщення на GitHub Pages</em></p>
-    </footer>
+        <h3>Мови</h3>
+        <ul>
+          <li>Українська — рідна</li>
+          <li>Англійська — середній рівень (вивчається)</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- English Version -->
+    <div id="en" style="display: none;">
+      <header>
+        <h1>Yulia Stupaka</h1>
+        <h2>Junior JavaScript Developer</h2>
+        <p>Email: <a href="mailto:stupakajulia@gmail.com">stupakajulia@gmail.com</a></p>
+      </header>
+
+      <section>
+        <h3>Goal</h3>
+        <p>To start a career as a Junior JavaScript Developer in a modern IT company where I can apply my analytical mindset to build efficient web solutions. I am interested in continuous learning, skill improvement, and productive teamwork.</p>
+
+        <h3>Education</h3>
+        <ul>
+          <li>2021 — Bachelor's in Software Engineering, KPI</li>
+          <li>2010 — Bachelor's in Finance, International University of Finance</li>
+          <li>2007 — Master's in Technology and Design, Kyiv National University of Technologies and Design</li>
+        </ul>
+
+        <h3>Experience</h3>
+        <p>2022–2025 — Lead Specialist at the Financial Department of Dnipro District State Administration in Kyiv. Worked with data analysis, reporting systems, and budget automation.</p>
+        <p>2009–2021 — Engineer, PC operator, lab assistant — experience in documentation, calculation, and public sector projects.</p>
+
+        <h3>Skills</h3>
+        <ul>
+          <li>JavaScript, HTML, CSS</li>
+          <li>Git, GitHub, Git Flow</li>
+          <li>VS Code, Chrome DevTools</li>
+        </ul>
+
+        <h3>Personal Qualities</h3>
+        <ul>
+          <li>Attention to detail</li>
+          <li>Analytical thinking</li>
+          <li>Eagerness to learn</li>
+          <li>Teamwork and responsibility</li>
+        </ul>
+
+        <h3>Languages</h3>
+        <ul>
+          <li>Ukrainian — native</li>
+          <li>English — intermediate (studied actively)</li>
+        </ul>
+      </section>
+    </div>
   </div>
+
+  <script>
+    function switchLanguage() {
+      const ua = document.getElementById('ua');
+      const en = document.getElementById('en');
+      const currentLang = localStorage.getItem("lang") || "ua";
+
+      if (currentLang === "ua") {
+        ua.style.display = 'none';
+        en.style.display = 'block';
+        localStorage.setItem("lang", "en");
+      } else {
+        ua.style.display = 'block';
+        en.style.display = 'none';
+        localStorage.setItem("lang", "ua");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const ua = document.getElementById('ua');
+      const en = document.getElementById('en');
+      const savedLang = localStorage.getItem("lang") || "ua";
+
+      if (savedLang === "en") {
+        ua.style.display = 'none';
+        en.style.display = 'block';
+      } else {
+        ua.style.display = 'block';
+        en.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
